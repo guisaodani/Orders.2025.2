@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Backend", "Orders.Backend\Orders.Backend.csproj", "{F1DC6074-ABF8-4BB9-8BB9-BC14BEC0B842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Share", "Orders.Share\Orders.Share.csproj", "{5504BCFD-65FC-4513-A49E-6CD8B4EB5387}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Shared", "Orders.Share\Orders.Shared.csproj", "{5504BCFD-65FC-4513-A49E-6CD8B4EB5387}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Frontend", "Orders.Frontend\Orders.Frontend.csproj", "{FE33B5D1-D6BE-F5C5-0E57-09A39A7B0FEF}"
 EndProject
