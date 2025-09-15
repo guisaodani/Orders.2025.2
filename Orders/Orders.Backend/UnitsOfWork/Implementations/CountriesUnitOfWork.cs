@@ -1,9 +1,9 @@
 ﻿using Orders.Backend.Repositories.Interfaces;
-using Orders.Backend.UnitsOfWork.Implementations;
+using Orders.Backend.UnitsOfWork.Interfaces;
 using Orders.Shared.Entities;
 using Orders.Shared.Responses;
 
-namespace Orders.Backend.UnitsOfWork.Interfaces;
+namespace Orders.Backend.UnitsOfWork.Implementations;
 
 public class CountriesUnitOfWork : GenericUnitOfWork<Country>, ICountriesUnitOfWork
 {
