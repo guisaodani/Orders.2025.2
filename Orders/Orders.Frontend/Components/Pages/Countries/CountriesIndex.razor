@@ -1,10 +1,11 @@
 ﻿@page "/countries"
 
+
 <h3>Países</h3>
 
 @if (countries == null)
 {
-	<p>Cargando...</p>
+	<Loading Label="Cargando países, Por favor espera."/>
 }
 else
 {
