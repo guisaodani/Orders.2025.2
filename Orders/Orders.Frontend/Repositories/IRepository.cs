@@ -1,4 +1,7 @@
-﻿namespace Orders.Frontend.Repositories;
+﻿using Orders.Shared.DTOs;
+using Orders.Shared.Responses;
+
+namespace Orders.Frontend.Repositories;
 
 public interface IRepository
 {
