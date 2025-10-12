@@ -126,7 +126,7 @@ public partial class CategoriesIndex
             CloseButton = true,
             MaxWidth = MaxWidth.ExtraSmall,
             CloseOnEscapeKey =
-true
+            true
         };
         var dialog = await DialogService.ShowAsync<ConfirmDialog>("Confirmación", parameters, options);
         var result = await dialog.Result;
