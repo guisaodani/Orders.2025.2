@@ -14,10 +14,16 @@ public class CategoriesController : GenericController<Category>
 {
     private readonly ICategoriesUnitOfWork _categoriesUnitOfWork;
 
-    public CategoriesController(IGenericUnitOfWork<Category> unit, ICategoriesUnitOfWork categoriesUnitOfWork) :
-base(unit)
+    public CategoriesController(IGenericUnitOfWork<Category> unit, ICategoriesUnitOfWork categoriesUnitOfWork) : base(unit)
     {
         _categoriesUnitOfWork = categoriesUnitOfWork;
+    }
+
+    [AllowAnonymous]
+    [HttpGet("combo")]
+    public async Task<IActionResult> GetComboAsync()
+    {
+        return Ok(await _categoriesUnitOfWork.GetComboAsync());
     }
 
     [HttpGet("paginated")]

@@ -10,11 +10,12 @@ public class CategoriesUnitOfWork : GenericUnitOfWork<Category>, ICategoriesUnit
 {
     private readonly ICategoriesRepository _categoriesRepository;
 
-    public CategoriesUnitOfWork(IGenericRepository<Category> repository, ICategoriesRepository categoriesRepository)
-: base(repository)
+    public CategoriesUnitOfWork(IGenericRepository<Category> repository, ICategoriesRepository categoriesRepository) : base(repository)
     {
         _categoriesRepository = categoriesRepository;
     }
+
+    public async Task<IEnumerable<Category>> GetComboAsync() => await _categoriesRepository.GetComboAsync();
 
     public override async Task<ActionResponse<IEnumerable<Category>>> GetAsync(PaginationDTO pagination) =>
         await _categoriesRepository.GetAsync(pagination);
