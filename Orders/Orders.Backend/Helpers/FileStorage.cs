@@ -25,6 +25,7 @@ public class FileStorage : IFileStorage
     {
         var client = new BlobContainerClient(_connectionString, containerName);
         await client.CreateIfNotExistsAsync();
+        await client.SetAccessPolicyAsync(PublicAccessType.Blob);
         client.SetAccessPolicy(PublicAccessType.Blob);
         var fileName = $"{Guid.NewGuid()}{extention}";
         var blob = client.GetBlobClient(fileName);
